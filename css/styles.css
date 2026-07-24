@@ -11403,4 +11403,22 @@ h2, h3 {
         font-size: 0.95rem !important;
         line-height: 1.7 !important;
     }
+}/* ===== 强制 China Market Opportunity 文字框自适应内容宽度 ===== */
+#china-opportunity .project-text {
+    display: inline-block !important;  /* 让框体宽度自适应内容 */
+    width: auto !important;            /* 不强制撑满父容器 */
+    max-width: 100% !important;        /* 防止超出容器 */
+    padding: 1.5rem 2rem !important;
+    background: rgba(0, 0, 0, 0.6) !important;
+    color: #fff !important;
+}
+
+/* 手机端同步调整 */
+@media (max-width: 768px) {
+    #china-opportunity .project-text {
+        padding: 1.2rem 1.5rem !important;
+        display: inline-block !important;
+        width: auto !important;
+        max-width: 100% !important;
+    }
 }
