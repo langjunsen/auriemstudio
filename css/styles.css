@@ -11445,4 +11445,34 @@ h2, h3 {
     #projects {
         padding-top: 1rem !important;
     }
+}/* ===== 强制语言导航栏始终可见 ===== */
+#mainNav .language-switch,
+#mainNav .language-switch * {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+}
+
+/* 覆盖所有可能隐藏它的状态 */
+#mainNav.navbar-shrink .language-switch,
+#mainNav .language-switch,
+#mainNav .language-switch a,
+#mainNav .language-switch span {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* 移动端同样强制 */
+@media (max-width: 991.98px) {
+    #mainNav .language-switch {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
 }
