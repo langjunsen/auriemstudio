@@ -11292,9 +11292,6 @@ li {
 }
 /* ----- 6. China Market Opportunity 背景图（统一管理） ----- */
 #china-opportunity .row {
-        margin-top: 0rem;  /* 或 padding-top: 0rem; 整体下移 */
-}
-#china-opportunity .row {
     background: url("../assets/img/zhongguo.jpg") center/cover no-repeat;
     min-height: 400px;
     position: relative;
@@ -11308,6 +11305,11 @@ li {
 }
 #china-opportunity .project-text {
     color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
 }
 #china-opportunity .project-text h4 {
     font-family: 'Cinzel', serif;
@@ -11322,6 +11324,28 @@ li {
     line-height: 1.9;
     color: rgba(255, 255, 255, 0.9);
 }
+
+/* ===== 手机端适配 ===== */
+@media (max-width: 768px) {
+    #china-opportunity .row {
+        background: url("../assets/img/shouji.jpg") center/contain no-repeat;
+        min-height: 300px;
+        background-color: #1a1a1a;
+    }
+
+    #china-opportunity .col-lg-6:last-child {
+        min-height: 300px;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.65);
+    }
+
+    #china-opportunity .project-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
+
+
 /* 标题/导航/按钮：Cinzel */
 h1, h2, h3, h4, h5, h6,
 .navbar-brand,
@@ -11385,7 +11409,7 @@ h2, h3 {
     align-items: center !important;
     justify-content: center !important;
     padding: 0 !important;
-}/* ===== 强制修复手机端 China Market Opportunity 背景图 ===== */
+}/* ===== 手机端强制适配（覆盖所有冲突） ===== */
 @media (max-width: 768px) {
     #china-opportunity .row {
         background: url("../assets/img/shouji.jpg") center/contain no-repeat !important;
@@ -11399,26 +11423,26 @@ h2, h3 {
         background: rgba(0, 0, 0, 0.65) !important;
     }
 
+    
     #china-opportunity .project-text p {
         font-size: 0.95rem !important;
         line-height: 1.7 !important;
     }
-}/* ===== 强制 China Market Opportunity 文字框自适应内容宽度 ===== */
-#china-opportunity .project-text {
-    display: inline-block !important;  /* 让框体宽度自适应内容 */
-    width: auto !important;            /* 不强制撑满父容器 */
-    max-width: 100% !important;        /* 防止超出容器 */
-    padding: 1.5rem 2rem !important;
-    background: rgba(0, 0, 0, 0.6) !important;
-    color: #fff !important;
+}/* ===== 缩小 China Market Opportunity 与下方板块的间距 ===== */
+#china-opportunity {
+    padding-bottom: 2rem !important;  /* 原来默认是 10rem，大幅缩小 */
 }
 
-/* 手机端同步调整 */
+#projects {
+    padding-top: 2rem !important;     /* 原来默认是 10rem，大幅缩小 */
+}
+
+/* 手机端再调小一点 */
 @media (max-width: 768px) {
-    #china-opportunity .project-text {
-        padding: 1.2rem 1.5rem !important;
-        display: inline-block !important;
-        width: auto !important;
-        max-width: 100% !important;
+    #china-opportunity {
+        padding-bottom: 1rem !important;
+    }
+    #projects {
+        padding-top: 1rem !important;
     }
 }
