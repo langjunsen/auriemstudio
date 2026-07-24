@@ -11069,8 +11069,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
-  background-position: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%),  background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
@@ -11201,211 +11200,22 @@ body {
 .footer {
   padding: 5rem 0;
 }/* =========================================
-   Auriem Studio Premium Typography
-   Playfair Display + Montserrat
+   Auriem Studio 自定义样式（清理版）
    ========================================= */
 
-
-/* Global Body Font */
-
-body {
-
-    font-family: "Montserrat", sans-serif;
-
-    font-weight: 300;
-
-    letter-spacing: 0.03em;
-
+/* ----- 1. 封面背景 ----- */
+.masthead {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 75%, #000 100%),
+                url("../assets/img/changcheng.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 35rem;
+    padding: 15rem 0;
 }
 
-
-
-/* Brand + All Titles */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.navbar-brand {
-
-    font-family: "Playfair Display", serif;
-
-    font-weight: 400;
-
-    letter-spacing: 0.12em;
-
-}
-
-
-
-/* Hero Main Title */
-
-.masthead h1 {
-
-    font-family: "Playfair Display", serif;
-
-    font-weight: 400;
-
-    letter-spacing: 0.18em;
-
-}
-
-
-
-/* Hero Subtitle */
-
-.masthead h2 {
-
-    font-family: "Montserrat", sans-serif;
-
-    font-weight: 300;
-
-    letter-spacing: 0.05em;
-
-}
-
-
-
-/* Navigation */
-
-.nav-link {
-
-    font-family: "Montserrat", sans-serif;
-
-    font-weight: 400;
-
-    letter-spacing: 0.12em;
-
-}
-
-
-
-/* Buttons */
-
-.btn {
-
-    font-family: "Montserrat", sans-serif;
-
-    font-weight: 400;
-
-    letter-spacing: 0.15em;
-
-}
-
-
-
-/* Paragraph Text */
-
-p {
-
-    font-family: "Montserrat", sans-serif;
-
-    font-weight: 300;
-
-    letter-spacing: 0.04em;
-
-}
-
-
-
-/* Cards / Small Text */
-
-.small,
-.card {
-
-    font-family: "Montserrat", sans-serif;
-
-}
-
-
-
-/* Remove Old Cinzel Override */
-
-body * {
-
-    font-family: inherit;
-
-}
-
-
-
-/* Brand */
-
-.navbar-brand {
-
-    margin-bottom: 5px;
-
-}
-
-
-
-/* Language Position */
-
-.language-switch {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-top: -5px;
-
-}
-
-
-
-/* Language Text */
-
-.language-switch a {
-
-    color: inherit;
-
-    text-decoration: none;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 0.15em;
-
-    font-weight: 400;
-
-}
-
-
-
-/* Remove underline */
-
-.language-switch a:hover {
-
-    text-decoration: none;
-
-}
-
-
-
-/* Separator */
-
-.language-switch span {
-
-    color: inherit;
-
-    opacity: 0.7;
-
-}
-/* ===== 导航栏布局修复 ===== */
-
-/* 覆盖原有的 flex-direction: column */
-#mainNav .container {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-/* 语言切换在导航栏中的样式 */
+/* ----- 2. 语言切换（仅控制颜色、间距，字体大小由内联样式控制） ----- */
 #mainNav .language-switch {
     display: flex;
     align-items: center;
@@ -11413,45 +11223,153 @@ body * {
     margin-left: 20px;
     padding: 0.5rem 0;
 }
-
 #mainNav .language-switch a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255,255,255,0.7);
     text-decoration: none;
-    font-size: 0.75rem;
+    /* 移除了 font-size 定义，避免覆盖内联样式 */
     font-weight: 400;
     letter-spacing: 0.05em;
     transition: color 0.3s;
 }
-
 #mainNav .language-switch a:hover {
     color: #fff;
 }
-
 #mainNav .language-switch span {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255,255,255,0.3);
 }
-
-/* 导航栏滚动收缩后的样式（白底） */
 #mainNav.navbar-shrink .language-switch a {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0,0,0,0.6);
 }
-
 #mainNav.navbar-shrink .language-switch a:hover {
     color: #000;
 }
-
 #mainNav.navbar-shrink .language-switch span {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0,0,0,0.3);
 }
-
-/* 移动端适配：折叠菜单中的语言切换 */
 @media (max-width: 991.98px) {
     #mainNav .language-switch {
         margin-left: 0;
         padding: 0.5rem 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255,255,255,0.1);
     }
     #mainNav.navbar-shrink .language-switch {
-        border-top-color: rgba(0, 0, 0, 0.1);
+        border-top-color: rgba(0,0,0,0.1);
     }
+}
+
+/* ----- 3. 导航栏布局 ----- */
+#mainNav .container {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ----- 4. 字体设置 ----- */
+/* 正文：Montserrat Light */
+body,
+p,
+.text-white-50,
+.text-black-50,
+.small,
+.card-text,
+.project-text p,
+.lead,
+.mb-0,
+.about-section p,
+.signup-section p,
+.contact-section .small,
+.footer,
+.list-unstyled,
+li {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.03em;
+}
+/* ----- 5. 当前语言高亮（提高权重） ----- */
+#mainNav .language-switch a.active {
+    font-weight: bold !important;
+    color: #fff !important;
+}
+/* ----- 6. China Market Opportunity 背景图（统一管理） ----- */
+#china-opportunity .row {
+        margin-top: 0rem;  /* 或 padding-top: 0rem; 整体下移 */
+}
+#china-opportunity .row {
+    background: url("../assets/img/zhongguo.jpg") center/cover no-repeat;
+    min-height: 400px;
+    position: relative;
+}
+#china-opportunity .col-lg-6:last-child {
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    min-height: 400px;
+}
+#china-opportunity .project-text {
+    color: #fff;
+}
+#china-opportunity .project-text h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+}
+#china-opportunity .project-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.9);
+}
+/* 标题/导航/按钮：Cinzel */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.nav-link,
+.btn,
+.masthead h1,
+.masthead h2,
+.about-section h2,
+.projects-section h4,
+.featured-text h4,
+.signup-section h2,
+.contact-section h4,
+.card h4,
+.project-text h4,
+.language-switch a,
+.navbar-toggler {
+    font-family: 'Cinzel', serif !important;
+    letter-spacing: 0.05em;
+}
+
+/* 权重微调 */
+.masthead h1 {
+    font-weight: 700 !important;
+    letter-spacing: 0.15em;
+}
+.navbar-brand {
+    font-weight: 600 !important;
+}
+.btn {
+    font-weight: 600 !important;
+    letter-spacing: 0.15em;
+}
+.project-text h4 {
+    font-weight: 600 !important;
+}
+.signup-section h2 {
+    font-weight: 700 !important;
+}
+.contact-section h4 {
+    font-weight: 600 !important;
+}
+.nav-link {
+    font-weight: 500 !important;
+}
+.language-switch a {
+    font-weight: 500 !important;
+    letter-spacing: 0.08em;
+}
+h2, h3 {
+    font-weight: 600 !important;
 }

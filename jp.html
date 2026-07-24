@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Auriem Studio は、グローバルなクリエイターと中国市場をつなぐ、ブランドローカライゼーション、マーケティング、製造サポート、物流ソリューションを提供します。" />
+    <meta name="author" content="Auriem Studio" />
+    <title>Auriem Studio | グローバルな創造力と中国市場をつなぐ</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Core theme CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- カスタムスタイル -->
+    <style>
+        /* ============================================
+           1. 言語切り替えスタイル
+           ============================================ */
+        #mainNav .language-switch a,
+        #mainNav .language-switch span {
+            font-size: 1rem !important;
+        }
+        #mainNav .language-switch a {
+            color: rgba(255, 255, 255, 0.5) !important;
+            transition: color 0.3s;
+        }
+        #mainNav .language-switch a:hover {
+            color: rgba(255, 255, 255, 0.75) !important;
+        }
+        #mainNav .language-switch span {
+            color: rgba(255, 255, 255, 0.3) !important;
+        }
+        #mainNav.navbar-shrink .language-switch a {
+            color: #000 !important;
+        }
+        #mainNav.navbar-shrink .language-switch a:hover {
+            color: #64a19d !important;
+        }
+        #mainNav.navbar-shrink .language-switch span {
+            color: rgba(0, 0, 0, 0.3) !important;
+        }
+
+        /* ============================================
+           2. モバイル対応
+           ============================================ */
+        @media (max-width: 991.98px) {
+            #mainNav .container {
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+            }
+            #mainNav .navbar-collapse {
+                flex-grow: 1 !important;
+                flex-basis: 100% !important;
+                margin-top: 10px;
+            }
+            #mainNav .navbar-nav {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                width: 100% !important;
+            }
+            #mainNav .language-switch {
+                margin-top: 2px !important;
+            }
+        }
+
+        /* ============================================
+           3. シルバーテキスト調整
+           ============================================ */
+        .text-white-50 {
+            font-size: 1.2rem !important;
+            color: rgba(255, 255, 255, 0.75) !important;
+        }
+
+        /* ============================================
+           4. フッターコンタクトカード
+           ============================================ */
+        .contact-section .card-body {
+            color: #000 !important;
+        }
+        .contact-section .card-body h4 {
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            color: #000 !important;
+        }
+        .contact-section .card-body .small {
+            font-size: 0.975rem !important;
+            font-weight: 500 !important;
+            color: #000 !important;
+        }
+        .contact-section .card hr {
+            border-color: #64a19d !important;
+        }
+
+        /* ============================================
+           5. フォントルール
+           ============================================ */
+        body,
+        p,
+        .text-white-50,
+        .text-black-50,
+        .small,
+        .card-text,
+        .project-text p,
+        .lead,
+        .mb-0,
+        .about-section p,
+        .signup-section p,
+        .contact-section .small,
+        .footer,
+        .list-unstyled,
+        li {
+            font-family: 'Montserrat', 'Noto Sans JP', sans-serif !important;
+            font-weight: 300 !important;
+            letter-spacing: 0.03em;
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .navbar-brand,
+        .nav-link,
+        .btn,
+        .masthead h1,
+        .masthead h2,
+        .about-section h2,
+        .projects-section h4,
+        .featured-text h4,
+        .signup-section h2,
+        .contact-section h4,
+        .card h4,
+        .project-text h4,
+        .language-switch a,
+        .navbar-toggler {
+            font-family: 'Cinzel', 'Noto Sans JP', serif !important;
+            letter-spacing: 0.05em;
+        }
+
+        .masthead h1 {
+            font-weight: 500 !important;
+            letter-spacing: 0.15em;
+        }
+        .navbar-brand {
+            font-weight: 600 !important;
+        }
+        .btn {
+            font-weight: 600 !important;
+            letter-spacing: 0.15em;
+        }
+        .project-text h4 {
+            font-weight: 600 !important;
+        }
+        .signup-section h2 {
+            font-weight: 700 !important;
+        }
+        .contact-section h4 {
+            font-weight: 600 !important;
+        }
+        .nav-link {
+            font-weight: 500 !important;
+        }
+        .language-switch a {
+            font-weight: 500 !important;
+            letter-spacing: 0.08em;
+        }
+        h2, h3 {
+            font-weight: 600 !important;
+        }
+
+        /* ============================================
+           6. カバー背景
+           ============================================ */
+        .masthead {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%),
+                url('assets/img/changcheng.jpg') !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            background-size: cover !important;
+            min-height: 100vh !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 !important;
+        }
+
+        /* ============================================
+           7. China Market Opportunity
+           ============================================ */
+        #china-opportunity {
+            margin-top: 0rem !important;
+        }
+        #china-opportunity .row {
+            background: url('assets/img/zhongguo.jpg') center/cover no-repeat;
+            min-height: 400px;
+            position: relative;
+        }
+        #china-opportunity .col-lg-6:last-child {
+            background: transparent !important;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+            min-height: 400px;
+        }
+        #china-opportunity .project-text {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1.5rem 2rem;
+            display: inline-block;
+            border-radius: 0;
+        }
+        #china-opportunity .project-text h4 {
+            font-family: 'Cinzel', 'Noto Sans JP', serif;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+        }
+        #china-opportunity .project-text p {
+            font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        @media (max-width: 991.98px) {
+            #china-opportunity .row {
+                min-height: auto;
+            }
+            #china-opportunity .col-lg-6:last-child {
+                background: rgba(0, 0, 0, 0.55);
+                display: flex;
+                align-items: center;
+                padding: 2rem;
+                min-height: 400px;
+                margin-left: auto;
+            }
+        }
+
+        /* ============================================
+           8. Our Expertise & Capabilities
+           ============================================ */
+        #projects {
+            padding-top: 0rem !important;
+        }
+        #projects .featured-text {
+            padding: 1rem 0;
+            display: inline-block;
+            max-width: 100%;
+        }
+        #projects .featured-text h4 {
+            color: #212529 !important;
+        }
+        #projects .featured-text p {
+            color: #666 !important;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5" style="display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:space-between; width:100%;">
+            <div style="display:flex; flex-direction:column; align-items:flex-start; padding:0; margin:0;">
+                <a class="navbar-brand" href="#page-top" style="padding:0; margin:0; line-height:1.2;">
+                    Auriem Studio
+                </a>
+                <div class="language-switch" style="display:flex; align-items:center; gap:6px; padding:0; margin:0; margin-top:2px;">
+                    <a href="index.html" style="padding:0; margin:0;">EN</a>
+                    <span style="padding:0; margin:0;">|</span>
+                    <a href="cn.html" style="padding:0; margin:0;">中</a>
+                    <span style="padding:0; margin:0;">|</span>
+                    <a href="jp.html" class="active" style="padding:0; margin:0;">日</a>
+                    <span style="padding:0; margin:0;">|</span>
+                    <a href="kr.html" style="padding:0; margin:0;">韓</a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="ナビゲーション切替">
+            メニュー <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive" style="flex-grow:0;">
+            <ul class="navbar-nav" style="display:flex; flex-direction:row; align-items:center; gap:0.5rem; margin:0; padding:0; list-style:none;">
+                <li class="nav-item"><a class="nav-link" href="#about">会社概要</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">専門性</a></li>
+                <li class="nav-item"><a class="nav-link" href="#signup">パートナーシップ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Masthead -->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">Auriem Studio</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">
+                        グローバルなイノベーションと中国市場をつなぐ。
+                        <br><br>
+                        市場参入戦略、ブランドローカライゼーション、製造サポート、フルフィルメントソリューションを提供する、グローバルクリエイターのための戦略的パートナーです。
+                    </h2>
+                    <a class="btn btn-primary" href="#about">AURIEMを知る</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Auriem Studio -->
+    <section class="about-section text-center" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">Auriem Studioについて</h2>
+                    <p class="text-white-50">
+                        Auriem Studioは、中国に拠点を置く戦略的市場拡大パートナーです。グローバルなクリエイターと革新的なブランドを、成長を続ける中国の消費者エコシステムにつなぎます。
+                        <br><br>
+                        ローカライズ戦略、マーケティングソリューション、製造サポート、フルフィルメントサービスを提供し、クリエイティブ製品の中国市場への参入と成長を支援します。
+                        <br><br>
+                        私たちの使命は、グローバルな創造力と中国の成長する消費市場を橋渡しすることです。
+                    </p>
+                </div>
+            </div>
+            <img class="img-fluid" src="assets/img/ipad.png" alt="Auriem Studio" />
+        </div>
+    </section>
+
+    <!-- China Market Opportunity -->
+    <section class="projects-section bg-light" id="china-opportunity">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6">
+                    <!-- 空 -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="project-text w-100 my-auto text-left">
+                        <h4 class="text-white">中国市場の機会</h4>
+                        <p>
+                            中国は世界最大かつ最もダイナミックな消費市場の一つであり、ユニークで創造的、プレミアムな製品への需要が高まっています。
+                            <br><br>
+                            ソーシャルプラットフォームとEコマースエコシステムは、ブランドが中国の消費者とつながる新たな機会を生み出しています。ビューティ、教育、インディペンデントアートからライフスタイルゲーム、カルチャーイマージョンまで、中国はグローバルな創造性の重要な目的地になりつつあります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Expertise & Capabilities -->
+    <section class="projects-section bg-light" id="projects">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-xl-8 col-lg-7">
+                    <img class="img-fluid mb-3 mb-lg-0" src="assets/img/diqiu.jpg" alt="専門性と実績" />
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>専門性と実績</h4>
+                        <p class="text-black-50 mb-0">
+                            グローバルなクリエイターが中国市場に参入し、成長を続けるための戦略的ソリューション。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Entry -->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="assets/img/lianjie.jpg" alt="市場参入" />
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">市場参入</h4>
+                                <p class="mb-0 text-white-50">
+                                    市場機会、消費者行動、競合環境を分析し、中国市場への効果的な参入戦略を策定します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Localization -->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="assets/img/beijing.jpg" alt="ブランドローカライゼーション" />
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">ブランドローカライゼーション</h4>
+                                <p class="mb-0 text-white-50">
+                                    オリジナルのクリエイティブビジョンを保ちながら、ブランドストーリー、製品コミュニケーション、マーケティングコンテンツを中国のオーディエンスに適応させます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manufacturing & Fulfillment -->
+            <div class="row gx-0 mb-5 justify-content-center">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="assets/img/tianjin.jpg" alt="製造・物流" />
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">製造・物流</h4>
+                                <p class="mb-0 text-white-50">
+                                    生産調整、品質管理、倉庫保管、配送ソリューションを提供し、オペレーションを簡素化しコストを削減します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Framework -->
+    <section class="signup-section" id="signup">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">パートナーシップの枠組み</h2>
+                    <p class="text-white-50 mb-5">
+                        クリエイターとともに、市場評価から製品成長までの完全な道筋を歩みます。
+                        <br><br>
+                        <strong>クリエイター</strong>
+                        &nbsp; → &nbsp;
+                        <strong>Auriem Studio</strong>
+                        &nbsp; → &nbsp;
+                        <strong>中国市場</strong>
+                        &nbsp; → &nbsp;
+                        <strong>顧客</strong>
+                    </p>
+                    <a class="btn btn-primary" href="mailto:langjunsen@auriemstudio.com">パートナーシップを探る</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section bg-black" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-building text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">会社情報</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">
+                                TREZR LIMITED
+                                <br>
+                                香港登記会社
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">メール</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">
+                                langjunsen@auriemstudio.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-globe text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">グローバルパートナーシップ</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">
+                                グローバルな創造力と中国市場をつなぐ
+                                <br><br>
+                                www.auriemstudio.com
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-black small text-center text-white-50">
+        <div class="container px-4 px-lg-5">
+            Copyright &copy; Auriem Studio 2026
+            <br>
+            グローバルな創造力と中国市場をつなぐ
+            <br>
+            www.auriemstudio.com
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS -->
+    <script src="js/scripts.js"></script>
+
+</body>
+</html>
