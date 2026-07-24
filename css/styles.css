@@ -11372,4 +11372,35 @@ h1, h2, h3, h4, h5, h6,
 }
 h2, h3 {
     font-weight: 600 !important;
+}/* ===== 强制覆盖 Grayscale 封面背景 ===== */
+.masthead {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%),
+                url("../assets/img/changcheng.jpg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}/* ===== 强制修复手机端 China Market Opportunity 背景图 ===== */
+@media (max-width: 768px) {
+    #china-opportunity .row {
+        background: url("../assets/img/shouji.jpg") center/contain no-repeat !important;
+        min-height: 300px !important;
+        background-color: #1a1a1a !important;
+    }
+
+    #china-opportunity .col-lg-6:last-child {
+        min-height: 300px !important;
+        padding: 1.5rem !important;
+        background: rgba(0, 0, 0, 0.65) !important;
+    }
+
+    #china-opportunity .project-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+    }
 }
