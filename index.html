@@ -182,52 +182,69 @@
             padding: 0 !important;
         }
 
-        /* ===== 7. China Market Opportunity ===== */
-        #china-opportunity {
-            margin-top: 0rem !important;
-        }
-        #china-opportunity .row {
-            background: url('assets/img/zhongguo.jpg') center/cover no-repeat;
-            min-height: 400px;
-            position: relative;
-        }
-        #china-opportunity .col-lg-6:last-child {
-            background: transparent !important;
-            display: flex;
-            align-items: center;
-            padding: 2rem;
-            min-height: 400px;
-        }
-        #china-opportunity .project-text {
-            color: #fff;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 1.5rem 2rem;
-            display: inline-block;
-            border-radius: 0;
-        }
-        #china-opportunity .project-text h4 {
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            margin-bottom: 1.5rem;
-        }
-        #china-opportunity .project-text p {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        @media (max-width: 991.98px) {
-            #china-opportunity .row {
-                min-height: auto;
-            }
-            #china-opportunity .col-lg-6:last-child {
-                background: rgba(0, 0, 0, 0.55);
-                padding: 2rem 1.5rem;
-                min-height: auto;
-            }
-        }
+       /* ===== 7. China Market Opportunity ===== */
+#china-opportunity {
+    margin-top: 0rem !important;
+}
+
+/* ----- 电脑端默认（宽屏） ----- */
+#china-opportunity .row {
+    background: url('assets/img/zhongguo.jpg') center/cover no-repeat;
+    min-height: 400px;
+    position: relative;
+}
+
+#china-opportunity .col-lg-6:last-child {
+    background: transparent !important;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    min-height: 400px;
+}
+
+#china-opportunity .project-text {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem 2rem;
+    display: inline-block;
+    border-radius: 0;
+}
+
+#china-opportunity .project-text h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
+}
+
+#china-opportunity .project-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== 平板/手机端（宽度 ≤ 992px） ===== */
+@media (max-width: 991.98px) {
+    #china-opportunity .row {
+        /* 改成 contain，让整张图完整显示（可能有留白） */
+        background: url('assets/img/shouji.jpg') center/contain no-repeat;
+        min-height: 300px; /* 手机端高度调低 */
+        background-color: #1a1a1a; /* 留白区域用深色填充 */
+    }
+    
+    #china-opportunity .col-lg-6:last-child {
+        background: rgba(0, 0, 0, 0.65) !important; /* 加深遮罩，文字更清晰 */
+        padding: 2rem 1.5rem;
+        min-height: 300px;
+    }
+
+    #china-opportunity .project-text p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+}
 
         /* ===== 8. Our Expertise & Capabilities ===== */
         #projects {
