@@ -11324,10 +11324,9 @@ li {
 }/* ===== 手机端适配 ===== */
 @media (max-width: 768px) {
     #china-opportunity .row {
-        /* 用 contain 让整张图完整显示 */
         background: url("../assets/img/shouji.jpg") center/contain no-repeat;
         min-height: 300px;
-        background-color: #1a1a1a; /* 留白区域颜色 */
+        background-color: #1a1a1a;
     }
 
     #china-opportunity .col-lg-6:last-child {
